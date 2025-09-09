@@ -1,0 +1,34 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: gray;
+  --text-color: #333;
+  --background-color: aliceblue;
+
+}
+body{
+  background-color: var(--background-color, "black");
+  color: var(--text-color)
+}
+
+#preloader {
+width: 100%;
+height: 100%;
+background-color: var(--primary-color);
+position: fixed;
+top: 0;
+left: 0;
+z-index: 1000;
+display: flex;
+justify-content: center;
+align-items: center;
+/*transition: all 0.5s ease-in-out;*/
+/* transition: opacity 300ms ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out; */
+
+}
+
+#preloader.loaded {
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+
+}
